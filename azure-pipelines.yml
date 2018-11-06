@@ -3,6 +3,7 @@
 
 pool:
   vmImage: 'Ubuntu 16.04'
-- script: |
-dotnet restore
-dotnet build
+steps:
+  - script: |
+  dotnet restore
+  dotnet build
