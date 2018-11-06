@@ -4,6 +4,6 @@
 pool:
   vmImage: 'Ubuntu 16.04'
 steps:
-  - script: |
+- script: |
     dotnet restore
     dotnet build --configuration $(buildConfiguration)
