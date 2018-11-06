@@ -7,7 +7,7 @@ steps:
 - script: |
     dotnet restore
     dotnet build --configuration $(buildConfiguration)
-    dotnet publish -c $(buildConfiguration) -o $BUILD_ARTIFACTSTAGINGDIRECTORY
+    dotnet publish -c $(buildConfiguration) -o $(Build.ArtifactStagingDirectory)
 # publish文件上传
 - task: PublishBuildArtifacts@1
 
