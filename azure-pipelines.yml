@@ -4,8 +4,12 @@
 pool:
   vmImage: 'Ubuntu 16.04'
 steps:
+- task: DotNetCoreCLI@2
+  inputs:
+    command: restore
+    projects: '**/*.csproj'
+    feedsToUse: demo-feed
 - script: |
-    dotnet restore
     dotnet build --configuration $(buildConfiguration)
     dotnet publish -c $(buildConfiguration) -o $(Build.ArtifactStagingDirectory)
 # publish文件上传
