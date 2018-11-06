@@ -7,3 +7,5 @@ steps:
 - script: |
     dotnet restore
     dotnet build --configuration $(buildConfiguration)
+- task: PublishBuildArtifacts@1
+
