@@ -9,6 +9,7 @@ steps:
     command: restore
     projects: '**/*.csproj'
     feedsToUse: demo-feed
+    nugetConfigPath: nuget.config
 - script: |
     dotnet build --configuration $(buildConfiguration)
     dotnet publish -c $(buildConfiguration) -o $(Build.ArtifactStagingDirectory)
